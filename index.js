@@ -1,13 +1,17 @@
-const Sequelize = require('sequelize');
-const sequelize = new Sequelize('BOOK-TRACKER', 'root', 'Trumpet0612!', {
-  host: 'localhost',
-  dialect: 'mysql',
-  operatorsAliases: false,
+const Book = require('./models/Book');
+const Author = require('./models/Author');
 
-  pool: {
-    max: 5,
-    min: 0,
-    acquire: 30000,
-    idle: 10000
-  }
-});
+//force: true will drop the table if it already exists
+// Book.sync({force: true}).then(() => {
+//   // Table created
+//   return Book.create({
+//     title: 'Harry Potter and the Order of the Phoenix',
+//     author: 'J.K. Rowling',
+//     datePublished: '06/21/2003',
+//     isbn: '',
+//     msrp: 14.99,
+//     edition: '1st',
+//     pages: 547,
+//     image: ''
+//   });
+// });
