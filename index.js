@@ -1,7 +1,8 @@
-const Book = require('./models/Book');
-const Author = require('./models/Author');
+// const Book = require('./models/Book');
+// const Author = require('./models/Author');
+const { Book, Author } = require('./models/index');
 
-//force: true will drop the table if it already exists
+// force: true will drop the table if it already exists
 // Book.sync({force: true}).then(() => {
 //   // Table created
 //   return Book.create({
